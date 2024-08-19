@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Expense Tracker</h1>
+        <main>
+            <div class="inp">
+                <input type="text" id="product">
+                <input type="text" id="price">
+                <select name="options" id="options">
+                    <option value="Food">Food</option>
+                    <option value="Transport">Transport</option>
+                    <option value="Clothes">Clothes</option>
+                    <option value="Rent">Rent</option>
+                    <option value="Outing">Outing</option>
+                </select>
+                <input type="date" name="date" id="date">
+                <button type="submit" class="btn_add" id="addbtn" onclick="Add()">Add Expense</button>
+                <button type="submit" class="btn_add" onclick="Remove()">Remove all Expense</button>
+            </div>
+            <div class="table1">
+                <table>
+                    <thead><tr>
+                      <th>Expense Name</th>
+                      <th>Amount</th>
+                      <th>Category</th>
+                      <th >Date</th>
+                      <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+                </table>
+            </div>
+        </main>
+        <footer>
+            <label for="filter_options" >Filter by Category: </label>
+            <select name="options" id="filter_options" onclick="FilterExpense()">
+                <option value="All">All</option>
+                <option value="Food">Food</option>
+                <option value="Transport">Transport</option>
+                <option value="Clothes">Clothes</option>
+                <option value="Rent">Rent</option>
+                <option value="Outing">Outing</option>
+            </select>
+        </footer>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>
